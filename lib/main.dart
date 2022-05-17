@@ -787,12 +787,11 @@ class Server {
   }
 
   void send(temp) async {
-
     Socket _socket = await Socket.connect('127.0.0.1', 7890);
 
-    /*_socket.listen((List<int> event) {
+    _socket.listen((List<int> event) {
       log(utf8.decode(event));
-    });*/
+    });
 
     _socket.add(utf8.encode(temp));
   }
